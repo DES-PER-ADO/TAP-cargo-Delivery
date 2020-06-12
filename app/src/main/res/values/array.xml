@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="activeTokin">
+        <item>0x05C8194Ab03C4930DD9128bd8d034846B5D3Fec1</item>
+        <item>0xe1CDc0e40ce064B28E403DD5f7325A4B53Eb2495</item>
+    </string-array>
+
+    <string-array name="option">
+        <item>Create Tokoin</item>
+        <item>Modify Tokoin</item>
+        <item>Transfer Tokoin</item>
+        <item>Delete Tokoin</item>
+    </string-array>
+
+    <string-array name="tid">
+        <item>TBD</item>
+        <item>0x7d92D7dE7d1245Fa605161121d9fF1Ac1d5EFfa8</item>
+    </string-array>
+
+</resources>

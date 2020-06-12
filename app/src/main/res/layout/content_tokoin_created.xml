@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".TokoinCreated"
+    tools:showIn="@layout/activity_tokoin_created">
+
+    <EditText
+        android:id="@+id/editText6"
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="8"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="0x05C8194Ab03C4930DD9128bd8d034846B5D3Fec1"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText4" />
+
+
+    <EditText
+        android:id="@+id/editText20"
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="8"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="0x7d92D7dE7d1245Fa605161121d9fF1Ac1d5EFfa8"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText5" />
+
+    <EditText
+        android:id="@+id/editText25"
+        android:layout_width="223dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="8"
+        android:gravity="bottom|start"
+        android:text="In delivery"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText7" />
+
+    <EditText
+        android:id="@+id/editText14"
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="8"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="0xB19318f8643DF5213cf8805DB852d9e911e82057"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText11" />
+
+    <TextView
+        android:id="@+id/editText7"
+        android:layout_width="143dp"
+        android:layout_height="44dp"
+        android:ems="7"
+        android:gravity="bottom"
+        android:inputType="textPersonName"
+        android:lineSpacingExtra="8sp"
+        android:text="Status:"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        app:layout_constraintStart_toStartOf="@+id/editText2"
+        app:layout_constraintTop_toBottomOf="@+id/editText11" />
+
+    <TextView
+        android:id="@+id/editText11"
+        android:layout_width="143dp"
+        android:layout_height="44dp"
+        android:ems="6"
+        android:gravity="bottom"
+        android:inputType="textPersonName"
+        android:lineSpacingExtra="8sp"
+        android:text="Holder:"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText7"
+        app:layout_constraintStart_toStartOf="@+id/editText7"
+        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+
+    <TextView
+        android:id="@+id/editText2"
+        android:layout_width="143dp"
+        android:layout_height="44dp"
+        android:ems="6"
+        android:gravity="bottom"
+        android:lineSpacingExtra="8sp"
+        android:text="Policy:"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText21"
+        app:layout_constraintStart_toStartOf="@+id/editText21"
+        app:layout_constraintTop_toBottomOf="@+id/editText7" />
+
+    <TextView
+        android:id="@+id/editText21"
+        android:layout_width="174dp"
+        android:layout_height="44dp"
+        android:ems="6"
+        android:gravity="bottom"
+        android:lineSpacingExtra="8sp"
+        android:text="Tracsaction History:"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText23"
+        app:layout_constraintStart_toStartOf="@+id/editText23"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+    <TextView
+        android:id="@+id/editText23"
+        android:layout_width="143dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="128dp"
+        android:ems="6"
+        android:gravity="bottom"
+        android:lineSpacingExtra="8sp"
+        android:text="Tokoin Location:"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText21" />
+
+    <TextView
+        android:id="@+id/editText5"
+        android:layout_width="143dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:ems="6"
+        android:gravity="bottom"
+        android:inputType="textPersonName"
+        android:lineSpacingExtra="8sp"
+        android:text="TID:"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText4"
+        app:layout_constraintStart_toStartOf="@+id/editText4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/editText4"
+        android:layout_width="143dp"
+        android:layout_height="44dp"
+        android:ems="6"
+        android:gravity="bottom"
+        android:inputType="textPersonName"
+        android:lineSpacingExtra="8sp"
+        android:text="Owner:"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText11"
+        app:layout_constraintStart_toStartOf="@+id/editText11"
+        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+
+    <Button
+        android:id="@+id/tokoinMap"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="144dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Tokoin Map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText23" />
+
+    <Button
+        android:id="@+id/txHistory"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="144dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Click To Show"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText21" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="144dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="click to show"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

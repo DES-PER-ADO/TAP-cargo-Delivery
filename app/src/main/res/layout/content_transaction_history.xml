@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@android:style/Widget.Holo.Light.ScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/editText28"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_marginTop="16dp"
+            android:ems="6"
+            android:gravity="bottom"
+            android:lineSpacingExtra="8sp"
+            android:text="Transaction history of:"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/editText4"
+            app:layout_constraintStart_toStartOf="@+id/editText4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/editText27"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            android:gravity="start|top"
+            android:text="0x05C8194Ab03C4930DD9128bd8d034846B5D3Fec1"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editText5" />
+
+        <TextView
+            android:id="@+id/editText50"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:ems="8"
+            android:gravity="bottom"
+            android:lineSpacingExtra="8sp"
+            android:text="Transaction Hash:"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/editText4"
+            app:layout_constraintStart_toStartOf="@+id/editText4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/editText52"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            android:gravity="start|top"
+            android:text="0x76d2421a854c7d3f6e3ee3045a3b912bd9544e169c7a559d65d6a258bf612592"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editText5" />
+
+        <TextView
+            android:id="@+id/editText49"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="8"
+            android:gravity="bottom"
+            android:lineSpacingExtra="8sp"
+            android:text="Height:"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/editText4"
+            app:layout_constraintStart_toStartOf="@+id/editText4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/editText56"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="6"
+            android:gravity="start|top"
+            android:text="23921"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editText5" />
+
+        <TextView
+            android:id="@+id/editText45"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="6"
+            android:gravity="bottom"
+            android:lineSpacingExtra="8sp"
+            android:text="Timestamp:"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/editText4"
+            app:layout_constraintStart_toStartOf="@+id/editText4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/editText57"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="8"
+            android:gravity="start|top"
+            android:text="2020-04-20 16:19:22"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editText5" />
+
+        <TextView
+            android:id="@+id/editText42"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="6"
+            android:gravity="bottom"
+            android:lineSpacingExtra="8sp"
+            android:text="TID:"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/editText4"
+            app:layout_constraintStart_toStartOf="@+id/editText4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/editText59"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="8"
+            android:gravity="start|top"
+            android:text="0x7d92D7dE7d1245Fa605161121d9fF1Ac1d5EFfa8"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editText5" />
+
+        <TextView
+            android:id="@+id/editText63"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="6"
+            android:gravity="bottom"
+            android:inputType="textPersonName"
+            android:lineSpacingExtra="8sp"
+            android:text="Option"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/editText4"
+            app:layout_constraintStart_toStartOf="@+id/editText4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/editText61"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:text="Create Tokoin"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editText5" />
+
+        <TextView
+            android:id="@+id/editText62"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="6"
+            android:gravity="bottom"
+            android:inputType="textPersonName"
+            android:lineSpacingExtra="8sp"
+            android:text="Sender:"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/editText4"
+            app:layout_constraintStart_toStartOf="@+id/editText4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/editText64"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="8"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:text="0x05C8194Ab03C4930DD9128bd8d034846B5D3Fec1"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editText5" />
+
+        <TextView
+            android:id="@+id/editText65"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="6"
+            android:gravity="bottom"
+            android:inputType="textPersonName"
+            android:lineSpacingExtra="8sp"
+            android:text="Receiver"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/editText4"
+            app:layout_constraintStart_toStartOf="@+id/editText4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/editText39"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="8"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:text="0x05C8194Ab03C4930DD9128bd8d034846B5D3Fec1"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editText5" />
+
+        <TextView
+            android:id="@+id/editText68"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="6"
+            android:gravity="bottom"
+            android:inputType="textPersonName"
+            android:lineSpacingExtra="8sp"
+            android:text="Policy:"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/editText4"
+            app:layout_constraintStart_toStartOf="@+id/editText4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button4"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:text="Click to show policy"
+            android:textAllCaps="false"
+            android:textColor="@color/common_google_signin_btn_text_light_default"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/editText40"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:ems="8"
+            android:gravity="bottom"
+            android:lineSpacingExtra="8sp"
+            android:text="Transaction Hash:"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/editText4"
+            app:layout_constraintStart_toStartOf="@+id/editText4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/editText48"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            android:gravity="start|top"
+            android:text="0x21206d89482498c3d50660984be4769cb3dcabc3950a2092bc00fcd1b893177a"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editText5" />
+
+        <TextView
+            android:id="@+id/editText53"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="8"
+            android:gravity="bottom"
+            android:lineSpacingExtra="8sp"
+            android:text="Height:"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/editText4"
+            app:layout_constraintStart_toStartOf="@+id/editText4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/editText46"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="6"
+            android:gravity="start|top"
+            android:text="23922"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editText5" />
+
+        <TextView
+            android:id="@+id/editText55"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="6"
+            android:gravity="bottom"
+            android:lineSpacingExtra="8sp"
+            android:text="Timestamp:"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/editText4"
+            app:layout_constraintStart_toStartOf="@+id/editText4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/editText47"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="8"
+            android:gravity="start|top"
+            android:text="2020-04-20 16:20:13"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editText5" />
+
+        <TextView
+            android:id="@+id/editText58"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="6"
+            android:gravity="bottom"
+            android:lineSpacingExtra="8sp"
+            android:text="TID:"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/editText4"
+            app:layout_constraintStart_toStartOf="@+id/editText4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/editText44"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="8"
+            android:gravity="start|top"
+            android:text="0x7d92D7dE7d1245Fa605161121d9fF1Ac1d5EFfa8"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editText5" />
+
+        <TextView
+            android:id="@+id/editText33"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="6"
+            android:gravity="bottom"
+            android:inputType="textPersonName"
+            android:lineSpacingExtra="8sp"
+            android:text="Option"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/editText4"
+            app:layout_constraintStart_toStartOf="@+id/editText4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/editText36"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:text="Transfer Tokoin"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editText5" />
+
+        <TextView
+            android:id="@+id/editText29"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="6"
+            android:gravity="bottom"
+            android:inputType="textPersonName"
+            android:lineSpacingExtra="8sp"
+            android:text="Sender:"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/editText4"
+            app:layout_constraintStart_toStartOf="@+id/editText4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/editText30"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="8"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:text="0x05C8194Ab03C4930DD9128bd8d034846B5D3Fec1"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editText5" />
+
+        <TextView
+            android:id="@+id/editText38"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="6"
+            android:gravity="bottom"
+            android:inputType="textPersonName"
+            android:lineSpacingExtra="8sp"
+            android:text="Receiver:"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/editText4"
+            app:layout_constraintStart_toStartOf="@+id/editText4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/editText66"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="8"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:text="0xB19318f8643DF5213cf8805DB852d9e911e82057"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editText5" />
+
+        <TextView
+            android:id="@+id/editText35"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="6"
+            android:gravity="bottom"
+            android:inputType="textPersonName"
+            android:lineSpacingExtra="8sp"
+            android:text="Policy:"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/editText4"
+            app:layout_constraintStart_toStartOf="@+id/editText4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:text="Click to show policy"
+            android:textAllCaps="false"
+            android:textColor="@color/common_google_signin_btn_text_light_default"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</ScrollView>
