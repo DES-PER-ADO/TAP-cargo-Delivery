@@ -5,13 +5,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.tokoin.contracts.DeployContracts;
 import com.example.tokoin.ui.login.LoginActivity;
+import com.example.tokoin.contracts.Tokoin;
+
 
 public class SolidityReview extends AppCompatActivity {
 
+    private DeployContracts deployContracts = new DeployContracts();
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -22,11 +27,23 @@ public class SolidityReview extends AppCompatActivity {
         confirmDeployButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){// Deploy smart contract
+                new Thread(deploy).start();
 
-
-                Intent i = new Intent(SolidityReview.this, LoginActivity.class);
-                startActivity(i);
+//                Intent i = new Intent(SolidityReview.this, LoginActivity.class);
+//                startActivity(i);
             }
         });
     }
+
+    Runnable deploy = new Runnable() {
+        @Override
+        public void run() {
+            try {
+                deployContracts.run();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    };
 }
+
