@@ -4,8 +4,10 @@ import android.os.AsyncTask;
 
 import com.example.tokoin.SolidityReview;
 
+import android.os.Environment;
 import android.util.Log;
 import org.web3j.crypto.Credentials;
+import org.web3j.crypto.Wallet;
 import org.web3j.crypto.WalletUtils;
 import org.web3j.protocol.Web3j;
 import org.web3j.protocol.core.methods.response.TransactionReceipt;
@@ -31,25 +33,23 @@ public class DeployContracts {
 
         // We then need to load our Ethereum wallet file
         // FIXME: Generate a new wallet file using the web3j command line tools https://docs.web3j.io/command_line.html
-        Credentials credentials =
-                WalletUtils.loadCredentials(
-                        "******",
-                        "wallet.json");// FileNotFoundException, QAQ
-//        log.info("Credentials loaded");
+
+        Credentials credentials = Credentials.create("0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+        Log.i("load","Credentials loaded");
 
         // FIXME: Request some Ether for the Rinkeby test network at https://www.rinkeby.io/#faucet
-//        log.info("Sending 1 Wei ("
-//                + Convert.fromWei("1", Convert.Unit.ETHER).toPlainString() + " Ether)");
+        Log.i("send","Sending 1 Wei ("
+                + Convert.fromWei("1", Convert.Unit.ETHER).toPlainString() + " Ether)");
         TransactionReceipt transferReceipt = Transfer.sendFunds(
                 web3j, credentials,
-                "0x375d939244203852F129a5C07afDafe243968096",  // you can put any address here
+                "0xc6d264611b0b8fea67fd6403f3633139aa746495",  // you can put any address here
                 BigDecimal.ONE, Convert.Unit.WEI)  // 1 wei = 10^-18 Ether
                 .send();
-//        log.info("Transaction complete, view it at https://rinkeby.etherscan.io/tx/"
-//                + transferReceipt.getTransactionHash());
+        Log.i("complete","Transaction complete, view it at https://rinkeby.etherscan.io/tx/"
+                + transferReceipt.getTransactionHash());
 
         // Now lets deploy a smart contract
-//        log.info("Deploying smart contract");
+        Log.i("deploy","Deploying smart contract");
         ContractGasProvider contractGasProvider = new DefaultGasProvider();
         Tokoin contract = Tokoin.deploy(
                 web3j,
@@ -58,7 +58,7 @@ public class DeployContracts {
         ).send();
 
         String contractAddress = contract.getContractAddress();
-//        log.info("Smart contract deployed to address " + contractAddress);
-//        log.info("View contract at https://rinkeby.etherscan.io/address/" + contractAddress);
+        Log.i("deployed","Smart contract deployed to address " + contractAddress);
+        Log.i("view","View contract at https://rinkeby.etherscan.io/address/" + contractAddress);
     }
 }

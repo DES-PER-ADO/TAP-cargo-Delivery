@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">testmap</string>
+    <string name="app_name">tokoin</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_tokoin_view">Tokoin View</string>
     <string name="title_home">Map</string>
