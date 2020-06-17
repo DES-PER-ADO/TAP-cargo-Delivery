@@ -1,14 +1,8 @@
 package com.example.tokoin.contracts;
 
-import android.os.AsyncTask;
-
-import com.example.tokoin.SolidityReview;
-
-import android.os.Environment;
 import android.util.Log;
+
 import org.web3j.crypto.Credentials;
-import org.web3j.crypto.Wallet;
-import org.web3j.crypto.WalletUtils;
 import org.web3j.protocol.Web3j;
 import org.web3j.protocol.core.methods.response.TransactionReceipt;
 import org.web3j.protocol.http.HttpService;
@@ -17,7 +11,6 @@ import org.web3j.tx.gas.ContractGasProvider;
 import org.web3j.tx.gas.DefaultGasProvider;
 import org.web3j.utils.Convert;
 
-import java.io.File;
 import java.math.BigDecimal;
 
 public class DeployContracts {
@@ -34,7 +27,7 @@ public class DeployContracts {
         // We then need to load our Ethereum wallet file
         // FIXME: Generate a new wallet file using the web3j command line tools https://docs.web3j.io/command_line.html
 
-        Credentials credentials = Credentials.create("0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+        Credentials credentials = Credentials.create("0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         Log.i("load","Credentials loaded");
 
         // FIXME: Request some Ether for the Rinkeby test network at https://www.rinkeby.io/#faucet
@@ -60,5 +53,6 @@ public class DeployContracts {
         String contractAddress = contract.getContractAddress();
         Log.i("deployed","Smart contract deployed to address " + contractAddress);
         Log.i("view","View contract at https://rinkeby.etherscan.io/address/" + contractAddress);
+
     }
 }

@@ -7,14 +7,23 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.web3j.crypto.Credentials;
+
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Switch;
 
 import com.example.tokoin.R;
 import com.example.tokoin.SolidityReview;
 import com.example.tokoin.TokoinCreated;
+import com.example.tokoin.contracts.Tokoin;
+
+import org.web3j.protocol.Web3j;
+import org.web3j.protocol.http.HttpService;
+import org.web3j.tx.gas.ContractGasProvider;
+import org.web3j.tx.gas.DefaultGasProvider;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -40,19 +49,32 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        Button loginButton = findViewById(R.id.mint);
+        Button confirmButton = findViewById(R.id.mint);
         Switch ethMode = findViewById(R.id.switch1);
+        Spinner optSpinner = findViewById(R.id.spinner_option);
+        Spinner addressSpinner = findViewById(R.id.spinner_activeTokoin);
+        Spinner tidSpinner = findViewById(R.id.spinner_tid);
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        confirmButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(ethMode.isChecked()){//ETH
-                    Intent i = new Intent(LoginActivity.this, SolidityReview.class);
-                    Bundle bundle = new Bundle();
-                    Spinner spinner_opt = findViewById(R.id.spinner_option);
-                    String opt = spinner_opt.getSelectedItem().toString();
+                    Web3j web3j = Web3j.build(new HttpService("https://rinkeby.infura.io/v3/fa43c71be4304c2c921ffa47cf288b1f"));
+                    Credentials credentials = Credentials.create(addressSpinner.getSelectedItem().toString());
+                    ContractGasProvider contractGasProvider = new DefaultGasProvider();
+                    Tokoin contract = Tokoin.load("0xefc116eda4114f734a7ca902124b38856dab83be",web3j,credentials,contractGasProvider);
+                    String opt = optSpinner.getSelectedItem().toString();
+                    if(opt=="Create Tokoin"){
+                        EditText holderEditText = findViewById(R.id.editTextHolder);
+                        EditText itemIdEditText = findViewById(R.id.editText)
+                        contract._mint(holderEditText.getText(),)
+                    }else if(opt=="Modify Tokoin"){
 
-                    startActivity(i);
+                    }else if(opt=="Transfer Tokoin"){
+
+                    }else if(opt=="Delete Tokoin"){
+
+                    }
                 }else {//Go
                     Intent i = new Intent(LoginActivity.this, TokoinCreated.class);
                     startActivity(i);
