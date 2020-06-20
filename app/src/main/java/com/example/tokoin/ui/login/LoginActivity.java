@@ -18,7 +18,12 @@ import android.widget.Switch;
 import com.example.tokoin.R;
 import com.example.tokoin.SolidityReview;
 import com.example.tokoin.TokoinCreated;
+import com.example.tokoin.utils.network;
 import com.example.tokoin.contracts.Tokoin;
+
+
+import org.bouncycastle.jcajce.provider.digest.SHA3;
+import org.bouncycastle.util.encoders.Hex;
 
 import org.web3j.protocol.Web3j;
 import org.web3j.protocol.http.HttpService;
@@ -59,20 +64,36 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(ethMode.isChecked()){//ETH
-                    Web3j web3j = Web3j.build(new HttpService("https://rinkeby.infura.io/v3/fa43c71be4304c2c921ffa47cf288b1f"));
-                    Credentials credentials = Credentials.create(addressSpinner.getSelectedItem().toString());
-                    ContractGasProvider contractGasProvider = new DefaultGasProvider();
-                    Tokoin contract = Tokoin.load("0xefc116eda4114f734a7ca902124b38856dab83be",web3j,credentials,contractGasProvider);
+//                    Web3j web3j = Web3j.build(new HttpService("https://rinkeby.infura.io/v3/fa43c71be4304c2c921ffa47cf288b1f"));
+//                    Credentials credentials = Credentials.create(addressSpinner.getSelectedItem().toString());
+//                    ContractGasProvider contractGasProvider = new DefaultGasProvider();
+//                    Tokoin contract = Tokoin.load("0xefc116eda4114f734a7ca902124b38856dab83be",web3j,credentials,contractGasProvider);
                     String opt = optSpinner.getSelectedItem().toString();
+                    String res;
                     if(opt=="Create Tokoin"){
                         EditText holderEditText = findViewById(R.id.editTextHolder);
-                        EditText itemIdEditText = findViewById(R.id.editText)
-                        contract._mint(holderEditText.getText(),)
+                        EditText itemIdEditText = findViewById(R.id.editText);
+                        EditText redeemTimeEditText = findViewById(R.id.editTextRedeemTime);
+                        SHA3.DigestSHA3 digestSHA3 = new SHA3.Digest256();
+                        byte[] digest = digestSHA3.digest("_mint(address,uint256,uint,uint,uint,address,address)".getBytes());
+                        res = network.postCreate(Hex.toHexString(digest).substring(0,8)+holderEditText.getText()+itemIdEditText.getText()+"1"+redeemTimeEditText.getText()+addressSpinner.getSelectedItem().toString());
                     }else if(opt=="Modify Tokoin"){
+                        EditText itemIdEditText = findViewById(R.id.editText);
+                        EditText redeemTimeEditText = findViewById(R.id.editTextRedeemTime);
+                        SHA3.DigestSHA3 digestSHA3 = new SHA3.Digest256();
+                        byte[] digest = digestSHA3.digest("_accessRule(uint256,uint,uint,uint,address,address,uint256)".getBytes());
+                        res = network.postModify(Hex.toHexString(digest).substring(0,8)+itemIdEditText.getText()+"1"+redeemTimeEditText.getText()+tidSpinner.getSelectedItem().toString());
 
                     }else if(opt=="Transfer Tokoin"){
+                        EditText holderEditText = findViewById(R.id.editTextHolder);
+                        SHA3.DigestSHA3 digestSHA3 = new SHA3.Digest256();
+                        byte[] digest = digestSHA3.digest("transferFrom(address,address,uint256)".getBytes());
+                        res = network.postTransfer(Hex.toHexString(digest).substring(0,8)+addressSpinner.getSelectedItem().toString()+holderEditText.getText()+tidSpinner.getSelectedItem().toString());
 
                     }else if(opt=="Delete Tokoin"){
+                        SHA3.DigestSHA3 digestSHA3 = new SHA3.Digest256();
+                        byte[] digest = digestSHA3.digest("_accessRevocation()".getBytes());
+                        res = network.postRevocation(Hex.toHexString(digest).substring(0,8));
 
                     }
                 }else {//Go
